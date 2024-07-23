@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "WordlwWacker",
+    "description": "Solve wordle easily",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background":{
+      "scripts":["background.js"]
+    },
+    "content_scripts": [{
+      "matches":["https://www.nytimes.com/games/wordle/index.html"],  
+      "js": ["inject.js"]
+      }],
+      "permissions": [
+    "storage"
+  ],
+    "options_page":"options.html"
+  }
