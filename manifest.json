@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "WordlwWacker",
+    "name": "WordleWacker",
     "description": "Solve wordle easily",
     "version": "1.0",
     "action": {
