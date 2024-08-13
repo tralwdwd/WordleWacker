@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "WordlwWacker",
+    "name": "WordleWacker",
     "description": "Solve wordle easily",
-    "version": "1.0",
+    "version": "0.1",
     "action": {
       "default_popup": "popup.html"
     },
