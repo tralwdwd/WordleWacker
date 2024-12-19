@@ -9,4 +9,4 @@ Meet WordleWacker, the easiest way to solve your daily wordle without all that h
 It's easy! Just go to the Wordle website, click play and the answe will be automatically typed in!
 
 #### Demo
-<video controls src="https://i.imgur.com/hKgoQ3H.mp4" title="Title"></video>
+https://i.imgur.com/hKgoQ3H.mp4
