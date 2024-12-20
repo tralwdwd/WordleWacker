@@ -1,7 +1,3 @@
-if (chrome.storage.sync.get(["status"]) != "true") {
-  chrome.storage.sync.set({ status: "true" });
-  chrome.storage.sync.set({ preferred: "button" });
-}
 const todayDate = new Date();
 const month = (todayDate.getMonth() + 1).toString().padStart("0", 2);
 const day = todayDate.getDate().toString().padStart("0", 2);
@@ -22,9 +18,7 @@ async function loadDay() {
   );
   const jsons = await response.json();
   console.log(jsons.solution);
-  chrome.storage.local.get(["preferred"]).then((result) => {
-    if (result.preferred == "auto") {
-      //alert(jsons.solution);
+  
       let observer = new MutationObserver((mut) => {
         const game = document.querySelector(".App-module_gameContainer__K_CBh");
         if (game) {
@@ -34,14 +28,7 @@ async function loadDay() {
         }
       });
       observer.observe(document.body, { childList: true, subtree: true });
-    } else {
-      chrome.runtime.onMessage.addListener(function (request) {
-        if (request.message == "answer") {
-          enterAnswer();
-        }
-      });
-    }
-  });
+    
   function enterAnswer() {
     const letters = jsons.solution.split("");
     console.log(letters);
@@ -54,7 +41,5 @@ async function loadDay() {
     }
   }
 }
-function minTwoDigits(n) {
-  return (n < 10 ? "0" : "") + n;
-}
+
 loadDay();
