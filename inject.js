@@ -1,6 +1,6 @@
 const todayDate = new Date();
-const month = (todayDate.getMonth() + 1).toString().padStart("0", 2);
-const day = todayDate.getDate().toString().padStart("0", 2);
+const month = (todayDate.getMonth() + 1).toString().padStart(2, "0");
+const day = todayDate.getDate().toString().padStart(2, "0");
 const year = todayDate.getFullYear();
 console.log(
   `https://www.nytimes.com/svc/wordle/v2/${year}-${month}-${day}.json`
